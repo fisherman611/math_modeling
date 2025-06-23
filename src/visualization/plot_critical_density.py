@@ -45,6 +45,10 @@ def plot_critical_density():
 
     for model_type, sim_points in [('strong_infectiousness', strong_sim), ('hub', hub_sim)]:
         for lambda_val in tqdm(lambda_sim, desc=f'Critical density {model_type}'):
+            if model_type == "strong_infectiousness":
+                M = 5.5
+            else: 
+                M = 5
             percolation_probs = []
             rho_values = []
             for N in tqdm(N_values):
@@ -52,7 +56,7 @@ def plot_critical_density():
                 for _ in range(n_runs):
                     result = sim.run_simulation(N, lambda_val, model_type)
                     max_dist = max(result['max_distances']) if result['max_distances'] else 0
-                    if max_dist >= 5:  # Percolation threshold as per paper
+                    if max_dist >= M:  # Percolation threshold as per paper
                         percolated_count += 1
                 percolation_prob = percolated_count / n_runs
                 percolation_probs.append(percolation_prob)
