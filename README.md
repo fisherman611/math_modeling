@@ -45,3 +45,5 @@ To run the simulation and reproduce the figures:
 [2] M. Lipsitch, T. Cohen, B. Cooper, J. M. Robins, S. Ma, L. James, G. Gopalakrishna, S. K. Chew, C. C. Tan, M. H. Samore, D. Fisman, and M. Murray. Transmission dynamics and
 control of severe acute respiratory syndrome. Science, 300(5627):1966–1970, 2003. doi: 10.1126/science.1086616. URL https://www.science.org/doi/abs/10.1126/science.
 1086616
+
+[3] World Health Organization. Severe acute respiratory syndrome (sars). https://www.who.int/health-topics/severe-acute-respiratory-syndrome, 2003.
